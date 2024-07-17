@@ -99,11 +99,11 @@ By following these guidelines and utilizing the provided `fitsImages` class, you
 -----------------------------------
 ![Statistical Analysis of Selected Regions](KDE.png)
 
-###Results for Statistical Analysis of Selected Regions
+### Results for Statistical Analysis of Selected Regions
 
 ![Animation of Auto Selected Regions based on Statistical Criteria](AnimationAutoSelectedRegions.gif)
 
-###Animation of Auto Selected Regions based on Statistical Criteria
+### Animation of Auto Selected Regions based on Statistical Criteria
 
 -----------------------------------
 
