@@ -152,23 +152,10 @@ Data sampling was carried out by usage of `SelectCutOut` function from **Selecti
 
 This Python script, `AutoSelect.py`, is designed to process fits files containing solar images. It identifies loop structures within the images based on certain statistical criteria and saves the detected loop regions as separate fits files. The statistical criteria is obtained from the statustucal analysis of the previous step, and can be modified accordingly.
 
-## Dependencies
-- Python 3.x
-- `matplotlib`
-- `astropy`
-- `sunpy`
-
-Ensure you have these dependencies installed before running the script. You can install them using `pip`:
-
-```bash
-pip install matplotlib astropy sunpy
-```
-
 #### Usage
 1. **Navigate to Directory**: Navigate to the directory where `LoopAutoSelect.py` is located.
 
 2. **Run Script**: Run the script from the command line with the following command:
-
 
 ```bash
 python LoopAutoSelect.py <fits_file>  <output_path>
