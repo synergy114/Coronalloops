@@ -2,7 +2,7 @@
 
 This repository provides tools for working with FITS astronomical images, focusing on the study of coronal loops. The repository offers functionalities for downloading, selecting regions, analyzing, and experimenting with image data. Below is a summary of the main features:
 
-## Features
+### Features
 
 1. **Downloading High-Quality Images**:
    - Download high-quality astronomical images for specific dates using Astropy and Sunpy.
@@ -19,27 +19,28 @@ This repository provides tools for working with FITS astronomical images, focusi
 5. **Experiments for Objective Mask Generation**:
    - Conduct experiments aimed at developing automated methods for generating objective masks of coronal loops. This feature is still under refinement but shows promising results.
 
-## Installation
+### Installation
 
 To use the tools in this repository, you need to install the required dependencies:
 
 ```bash
 pip install -r requirements.txt
-
+```
 
 ----------------------------------
-**Acquiring SDO**
+
+## Acquiring SDO: Downloading High-Quality Images
 This documentation provides a step-by-step guide on acquiring images from the Solar Dynamics Observatory (SDO) using Python and the SunPy library. SDO provides high-resolution images of the Sun in multiple wavelengths, captured by instruments like the Atmospheric Imaging Assembly (AIA).
 
 -------------------------------------
 
-**SelectionCutout**
+## SelectionCutout: Interactive Region Selection
 
-## fitsImages Class from `SelectionCutOut.py` 
+### fitsImages Class from `SelectionCutOut.py` 
 
 The `fitsImages` class is designed to facilitate the easy manipulation of FITS images. It provides methods to interactively select regions of interest within FITS images, extract sub-images (cutouts) from those regions, and save the sub-images to files. Additionally, it offers functionality to visualize and animate FITS images and their sub-images.
 
-### Usage
+#### Usage
 
 To utilize the `fitsImages` class effectively, follow these steps:
 
@@ -78,7 +79,7 @@ To utilize the `fitsImages` class effectively, follow these steps:
      fits_images_obj.animate()
      ```
 
-## Methods
+#### Methods
 
 The `fitsImages` class provides the following methods for manipulating FITS images:
 
@@ -91,7 +92,7 @@ The `fitsImages` class provides the following methods for manipulating FITS imag
 - **`animate(self, subImages=False)`**: Method to visualize and animate the FITS images or their sub-images. Parameters:
   - `subImages`: Boolean flag to indicate whether to animate sub-images (default is False).
 
-## Notes
+#### Notes
 
 By following these guidelines and utilizing the provided `fitsImages` class, you can efficiently work with FITS images, extract sub-images, and visualize your data in Python.
 
@@ -106,7 +107,7 @@ By following these guidelines and utilizing the provided `fitsImages` class, you
 
 -----------------------------------
 
-**LoopStatAnalysisPartialLoop**
+## LoopStatAnalysisPartialLoops: Statistical Analysis of Selected Regions
 
 The file "LoopStatAnalysisPartialLoop.csv" contains data extracted from manually segmented images, featuring summary statistics for each image. Below is a breakdown of the available columns:
 
@@ -126,7 +127,7 @@ Each row in the CSV file represents summary statistics for a single image, provi
 
 ---------------------------------------
 
-**Data.zip File Overview**
+**Data.zip File**
 
 The "Data.zip" file contains datasets categorized into different classes of images. Below is a brief overview of the contents of the zip file:
 
@@ -147,7 +148,7 @@ Data sampling was carried out by usage of `SelectCutOut` function from **Selecti
 
 -----------------------------------------
 
-**AutoSelect**
+## AutoSelect: Automated Region Selection
 
 This Python script, `AutoSelect.py`, is designed to process fits files containing solar images. It identifies loop structures within the images based on certain statistical criteria and saves the detected loop regions as separate fits files. The statistical criteria is obtained from the statustucal analysis of the previous step, and can be modified accordingly.
 
@@ -163,7 +164,7 @@ Ensure you have these dependencies installed before running the script. You can 
 pip install matplotlib astropy sunpy
 ```
 
-## Usage
+#### Usage
 1. **Navigate to Directory**: Navigate to the directory where `LoopAutoSelect.py` is located.
 
 2. **Run Script**: Run the script from the command line with the following command:
@@ -176,20 +177,20 @@ python LoopAutoSelect.py <fits_file>  <output_path>
 - `<output_path>`: Path to the directory where processed images will be saved.
 
 
-## Functionality
+#### Functionality
 - The `LoopAutoSelect.py` script processes images using a sliding window method. It selects regions within the images where the mean pixel value is greater than 304.85 and the interquartile range (IQR) is greater than 470. These threshold values were determined through statistical analysis.
 - Additionally, the script filters images that have up to 50% overlap of their areas. In case of overlap, the script selects the image with the highest mean and IQR values.
 - Detected loop regions that meet certain criteria (mean and IQR) are saved as separate fits files in the specified output directory.
 - Each saved fits file contains a subregion of the original image corresponding to a detected loop structure.
 
-## Additional Notes
+#### Additional Notes
 - Ensure that the fits file provided as input contains solar images and is compatible with the processing methods implemented in the script.
 - Adjust the parameters (`x1_position`, `x2_position`, `y1_position`, `y2_position`, `x_step`, `y_step`, `size`, `mean_crit`, `iqr_crit`) within the script according to your specific requirements for image processing and loop detection.
 - For further details on the implemented algorithms and methods, refer to the comments within the script.
 
 ------------------------------------
 
-**TestsToCreateMasks**
+## TestsToCreateMasks: Experiments for Objective Mask Generation
 
 These experiments are part of a research project aimed at developing efficient methods for identifying objective masks for coronal loops, which can be used to train deep learning models. Human annotation can be subjective, time-consuming, and prone to errors, which can lead to inconsistencies in the labeling process. Additionally, the complexity of coronal loops and the variability in solar images can make it challenging for humans to accurately identify them.
 By developing automated methods for generating objective masks, we can reduce the reliance on human annotation and improve the accuracy and efficiency of the process. Deep learning models, in particular, can learn to recognize patterns in solar images and segment coronal loops with high accuracy, once trained on a large dataset of labeled examples. 
