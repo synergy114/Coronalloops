@@ -1,5 +1,33 @@
-**Overview**
+# Coronal Loops Repo Overview
 
+This repository provides tools for working with FITS astronomical images, focusing on the study of coronal loops. The repository offers functionalities for downloading, selecting regions, analyzing, and experimenting with image data. Below is a summary of the main features:
+
+## Features
+
+1. **Downloading High-Quality Images**:
+   - Download high-quality astronomical images for specific dates using Astropy and Sunpy.
+   
+2. **Interactive Region Selection**:
+   - Interactively select a region within a FITS image and automatically save the selection.
+   
+3. **Statistical Analysis of Selected Regions**:
+   - Perform statistical analysis on selected regions with coronal loops to define criteria for regions of interest.
+   
+4. **Automated Region Selection**:
+   - Automatically select regions based on predefined statistical criteria.
+   
+5. **Experiments for Objective Mask Generation**:
+   - Conduct experiments aimed at developing automated methods for generating objective masks of coronal loops. This feature is still under refinement but shows promising results.
+
+## Installation
+
+To use the tools in this repository, you need to install the required dependencies:
+
+```bash
+pip install -r requirements.txt
+
+
+----------------------------------
 **Acquiring SDO**
 This documentation provides a step-by-step guide on acquiring images from the Solar Dynamics Observatory (SDO) using Python and the SunPy library. SDO provides high-resolution images of the Sun in multiple wavelengths, captured by instruments like the Atmospheric Imaging Assembly (AIA).
 
@@ -65,15 +93,16 @@ The `fitsImages` class provides the following methods for manipulating FITS imag
 
 ## Notes
 
-
 By following these guidelines and utilizing the provided `fitsImages` class, you can efficiently work with FITS images, extract sub-images, and visualize your data in Python.
 
 -----------------------------------
 ![Statistical Analysis of Selected Regions](KDE.png)
 
+###Results for Statistical Analysis of Selected Regions
+
 ![Animation of Auto Selected Regions based on Statistical Criteria](AnimationAutoSelectedRegions.gif)
 
-
+###Animation of Auto Selected Regions based on Statistical Criteria
 
 -----------------------------------
 
