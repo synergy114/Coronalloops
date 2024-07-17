@@ -97,13 +97,13 @@ The `fitsImages` class provides the following methods for manipulating FITS imag
 By following these guidelines and utilizing the provided `fitsImages` class, you can efficiently work with FITS images, extract sub-images, and visualize your data in Python.
 
 -----------------------------------
+### The results for the statistical analysis of the selected regions
 ![Statistical Analysis of Selected Regions](KDE.png)
 
-### Results for Statistical Analysis of Selected Regions
 
+### The animation of the auto selected regions based on the statistical criteria
 ![Animation of Auto Selected Regions based on Statistical Criteria](AnimationAutoSelectedRegions.gif)
 
-### Animation of Auto Selected Regions based on Statistical Criteria
 
 -----------------------------------
 
