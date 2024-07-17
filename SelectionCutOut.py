@@ -43,7 +43,7 @@ class fitsImages:
         plt.gca().add_patch(rect)
         plt.draw()
 
-    def SelectCutOut(self, OutputFolderName="NewSubImages/", CutoutSize=512):
+    def SelecToCutOut(self, OutputFolderName="NewSubImages/", CutoutSize=512):
         self.subImageLocation = os.path.join(self.location, OutputFolderName)
         matplotlib.use('TkAgg')
 
@@ -74,9 +74,9 @@ class fitsImages:
     def animate(self, subImages=False):
         matplotlib.use('TkAgg')
         fitsMaps=self._getFitsMaps(subImages)
-        fig = plt.figure()
+        fig = plt.figure(figsize=(10, 10))
         ax = fig.add_subplot(projection=fitsMaps.maps[0])
-        ani = fitsMaps.plot(axes=ax, clip_interval=(1, 99.98) * u.percent, interval=2000)
+        ani = fitsMaps.plot(axes=ax, clip_interval=(1, 99.99) * u.percent, interval=2000)
         plt.show()
     
    
